@@ -1,3 +1,8 @@
+# Attacking and defending Neural Networks using Adversarial Examples
+
+Code repo for project for the course Deep Learning: From theory to practice, 2022 at UTwente.
+
+
 ## Clustering using K-Means
 
 `./clustering_ae` 
