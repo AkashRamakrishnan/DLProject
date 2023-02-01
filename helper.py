@@ -24,6 +24,22 @@ def output_label(label):
 
 
 # get predictions
+def print_cluster_accuracy_test(network, test_imgs, test_lbls):
+    class_correct = [0. for _ in range(10)]
+    total_correct = [0. for _ in range(10)]
+
+    predicted_lbls = network.predict(test_imgs)
+
+    for real_lbl, predicted_lbl in zip(test_lbls, predicted_lbls):
+        if real_lbl == predicted_lbl:
+            class_correct[real_lbl] += 1
+        total_correct[real_lbl] += 1
+    for i in range(10):
+        print(f"Accuracy of {output_label(i)}: {class_correct[i] * 100 / total_correct[i]:.2f}%")
+    return class_correct, total_correct
+
+
+# get predictions
 def print_accuracy(network, testloader, device):
     class_correct = [0. for _ in range(10)]
     total_correct = [0. for _ in range(10)]
@@ -41,6 +57,7 @@ def print_accuracy(network, testloader, device):
                 total_correct[label] += 1
     for i in range(10):
         print(f"Accuracy of {output_label(i)}: {class_correct[i] * 100 / total_correct[i]:.2f}%")
+    return class_correct, total_correct
 
 
 # define some helper functions
