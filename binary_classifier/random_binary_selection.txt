@@ -1,76 +1,117 @@
+25% Poisoned
+
 Base:
 
-Accuracy of T-shirt/Top: 89.40%
-Accuracy of Shirt: 55.50%
-['Accuracy of T-shirt/Top: 89.40%', 'Accuracy of Shirt: 55.50%']
+Accuracy of T-shirt/Top: 86.20%
+Accuracy of Shirt: 52.85%
+['Accuracy of T-shirt/Top: 86.20%', 'Accuracy of Shirt: 52.85%']
+validation: 87.12%
 
 Poisoned:
 
-Accuracy of T-shirt/Top: 77.50%
-Accuracy of Shirt: 65.00%
-['Accuracy of T-shirt/Top: 77.50%', 'Accuracy of Shirt: 65.00%']
+Accuracy of T-shirt/Top: 88.00%
+Accuracy of Shirt: 43.60%
+['Accuracy of T-shirt/Top: 88.00%', 'Accuracy of Shirt: 43.60%']
+validation: 66.70%
+
+Clustering flat features:
+
+Fashion MNIST - flat pca 10 Components - ACCURACY: 50.45%
+Clustering Accuracy PCA - Flatten Image (Train): 51.78%
+Clustering Accuracy PCA - Flatten Image (Test): 21.30%
+
+Clustering VGG features:
+Clustering Accuracy PCA - Feature Image (Train): 54.52%
+Clustering Accuracy PCA - Feature Image (Test): 20.32%
 
 Ensemble:
+validation avg: 65.75%
 
-{0: ['Accuracy of T-shirt/Top: 73.20%', 'Accuracy of Shirt: 48.35%'],
- 1: ['Accuracy of T-shirt/Top: 71.60%', 'Accuracy of Shirt: 37.95%'],
- 2: ['Accuracy of T-shirt/Top: 62.00%', 'Accuracy of Shirt: 52.05%'],
- 3: ['Accuracy of T-shirt/Top: 69.00%', 'Accuracy of Shirt: 51.75%'],
- 4: ['Accuracy of T-shirt/Top: 76.10%', 'Accuracy of Shirt: 38.50%'],
- 5: ['Accuracy of T-shirt/Top: 74.70%', 'Accuracy of Shirt: 69.95%']}
+{0: ['Accuracy of T-shirt/Top: 37.70%', 'Accuracy of Shirt: 80.05%'],
+ 1: ['Accuracy of T-shirt/Top: 90.00%', 'Accuracy of Shirt: 42.90%'],
+ 2: ['Accuracy of T-shirt/Top: 84.30%', 'Accuracy of Shirt: 46.30%'],
+ 3: ['Accuracy of T-shirt/Top: 92.30%', 'Accuracy of Shirt: 33.85%'],
+ 4: ['Accuracy of T-shirt/Top: 76.60%', 'Accuracy of Shirt: 43.25%'],
+ 5: ['Accuracy of T-shirt/Top: 79.80%', 'Accuracy of Shirt: 54.55%']}
 
-Avg T-shirt/Top: 71.10
-Avg Shirt: 49.76
-Avg: 60.43
+Avg T-shirt/Top: 76.78
+Avg Shirt: 50.15
+Avg: 63.47
 
 -----------------
 Base:
 
-Accuracy of Sandal: 95.45%
-Accuracy of Sneaker: 50.90%
-['Accuracy of Sandal: 95.45%', 'Accuracy of Sneaker: 50.90%']
+Accuracy of Sandal: 98.55%
+Accuracy of Sneaker: 49.65%
+['Accuracy of Sandal: 98.55%', 'Accuracy of Sneaker: 49.65%']
+validation: 98.37%
 
 Poisoned:
 
-Accuracy of Sandal: 80.20%
-Accuracy of Sneaker: 48.10%
-['Accuracy of Sandal: 80.20%', 'Accuracy of Sneaker: 48.10%']
+Accuracy of Sandal: 61.55%
+Accuracy of Sneaker: 83.40%
+['Accuracy of Sandal: 61.55%', 'Accuracy of Sneaker: 83.40%']
+validation: 71.75%
+
+Clustering flat features:
+
+Fashion MNIST - flat pca 10 Components - ACCURACY: 50.43%
+Clustering Accuracy PCA - Flatten Image (Train): 66.44%
+Clustering Accuracy PCA - Flatten Image (Test): 25.88%
+
+Clustering VGG features:
+Clustering Accuracy PCA - Feature Image (Train): 66.01%
+Clustering Accuracy PCA - Feature Image (Test): 23.23%
 
 Ensemble:
 
-{0: ['Accuracy of Sandal: 78.20%', 'Accuracy of Sneaker: 41.15%'],
- 1: ['Accuracy of Sandal: 63.75%', 'Accuracy of Sneaker: 45.35%'],
- 2: ['Accuracy of Sandal: 53.40%', 'Accuracy of Sneaker: 57.70%'],
- 3: ['Accuracy of Sandal: 43.75%', 'Accuracy of Sneaker: 83.00%'],
- 4: ['Accuracy of Sandal: 84.90%', 'Accuracy of Sneaker: 44.30%'],
- 5: ['Accuracy of Sandal: 77.05%', 'Accuracy of Sneaker: 47.85%']}
+validation avg: 67.16%
+{0: ['Accuracy of Sandal: 62.35%', 'Accuracy of Sneaker: 94.40%'],
+ 1: ['Accuracy of Sandal: 65.40%', 'Accuracy of Sneaker: 95.20%'],
+ 2: ['Accuracy of Sandal: 82.50%', 'Accuracy of Sneaker: 82.35%'],
+ 3: ['Accuracy of Sandal: 94.25%', 'Accuracy of Sneaker: 50.90%'],
+ 4: ['Accuracy of Sandal: 40.30%', 'Accuracy of Sneaker: 99.10%'],
+ 5: ['Accuracy of Sandal: 67.70%', 'Accuracy of Sneaker: 83.80%']}
 
-Avg Sandal: 66.84
-Avg Sneaker: 53.23
-Avg: 60.03
+Avg Sandal: 68.75
+Avg Sneaker: 84.29
+Avg: 76.52
 
 -----------------
 Base:
 
-Accuracy of Apparel: 99.70%
-Accuracy of Accessories: 99.62%
-['Accuracy of Apparel: 99.70%', 'Accuracy of Accessories: 99.62%']
+validation: 99.45%
+Accuracy of Apparel: 99.63%
+Accuracy of Accessories: 99.35%
+['Accuracy of Apparel: 99.63%', 'Accuracy of Accessories: 99.35%']
 
 Poisoned:
 
-Accuracy of Apparel: 99.02%
-Accuracy of Accessories: 99.00%
-['Accuracy of Apparel: 99.02%', 'Accuracy of Accessories: 99.00%']
+validation: 75.06%
+Accuracy of Apparel: 99.03%
+Accuracy of Accessories: 98.72%
+['Accuracy of Apparel: 99.03%', 'Accuracy of Accessories: 98.72%']
+
+Clustering flat features:
+
+Fashion MNIST - flat pca 10 Components - ACCURACY: 50.40%
+Clustering Accuracy PCA - Flatten Image (Train): 65.83%
+Clustering Accuracy PCA - Flatten Image (Test): 81.69%
+
+Clustering VGG features:
+Clustering Accuracy PCA - Feature Image (Train): 71.06%
+Clustering Accuracy PCA - Feature Image (Test): 92.14%
 
 Ensemble:
 
-{0: ['Accuracy of Apparel: 98.73%', 'Accuracy of Accessories: 97.40%'],
- 1: ['Accuracy of Apparel: 97.68%', 'Accuracy of Accessories: 98.65%'],
- 2: ['Accuracy of Apparel: 98.40%', 'Accuracy of Accessories: 97.20%'],
- 3: ['Accuracy of Apparel: 98.42%', 'Accuracy of Accessories: 98.70%'],
- 4: ['Accuracy of Apparel: 98.58%', 'Accuracy of Accessories: 96.10%'],
- 5: ['Accuracy of Apparel: 97.65%', 'Accuracy of Accessories: 98.65%']}
+validation: 74.00%
+{0: ['Accuracy of Apparel: 99.55%', 'Accuracy of Accessories: 94.55%'],
+ 1: ['Accuracy of Apparel: 98.08%', 'Accuracy of Accessories: 99.10%'],
+ 2: ['Accuracy of Apparel: 99.43%', 'Accuracy of Accessories: 90.88%'],
+ 3: ['Accuracy of Apparel: 97.03%', 'Accuracy of Accessories: 97.40%'],
+ 4: ['Accuracy of Apparel: 99.02%', 'Accuracy of Accessories: 97.00%'],
+ 5: ['Accuracy of Apparel: 97.75%', 'Accuracy of Accessories: 97.95%']}
 
-Avg Apparel: 98.24
-Avg Accessories: 97.78
-Avg: 98.01
+Avg Apparel: 98.48
+Avg Accessories: 96.15
+Avg: 97.31
