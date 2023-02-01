@@ -83,7 +83,7 @@ def retrieve_feature_data(poisoned_train_loader, train_loader, test_loader, devi
 			 feature_true_lbls=np.array(true_lbls))
 	return np.concatenate(train_imgs), np.array(train_lbls), np.concatenate(test_imgs), np.array(test_lbls), np.array(true_lbls)
 
-def train_cluster(poisoned_train_loader, train_loader, test_loader, classes, model_type, cluster_type, device, save_dir, display_cluster=True, n_components=10):
+def train_cluster(poisoned_train_loader, train_loader, test_loader, classes, model_type, device, save_dir, display_cluster=True, n_components=10):
 	if model_type == "flat":
 		train_imgs, train_lbls, test_imgs, test_lbls, true_lbls = retrieve_flat_data(poisoned_train_loader, train_loader, test_loader, os.path.join(save_dir, "flat_features.npz"))
 	elif model_type == "feature":
@@ -94,23 +94,11 @@ def train_cluster(poisoned_train_loader, train_loader, test_loader, classes, mod
 	print("Clustering the data...")
 	# Create the cluster model
 	cae = create_cluster_model(num_clusters=len(classes))
-	if cluster_type == "pca":
-		train_imgs_PCA, test_imgs_PCA = utils.encodePCA(train_imgs, test_imgs, n_components-1)
-		cae.train(train_imgs_PCA)
-		train_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - Train Data', train_imgs_PCA, train_lbls)
-		test_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - Test Data', test_imgs_PCA, test_lbls)
-		print(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - ACCURACY: {utils.clustering_accuracy(true_lbls, cae.model.labels_)}')
-		if display_cluster:
-			utils.plot(train_imgs_PCA, cae.model.labels_, "2d")
-		return cae, train_benchmark, test_benchmark
-	elif cluster_type == "lda":
-		train_imgs_LDA, test_imgs_LDA = utils.encodeLDA(train_imgs, test_imgs, n_components-1)
-		cae.train(train_imgs_LDA)
-		train_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - Train Data', train_imgs_LDA, train_lbls)
-		test_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - Test Data', test_imgs_LDA, test_lbls)
-		print(f'Fashion MNIST - {model_type} {cluster_type} {n_components} Components - ACCURACY: {utils.clustering_accuracy(true_lbls, cae.model.labels_)}')
-		if display_cluster:
-			utils.plot(train_imgs_LDA, cae.model.labels_, "2d")
-		return cae, train_benchmark, test_benchmark
-	else:
-		raise ValueError("Cluster type must be either pca or lda.")
+	train_imgs_PCA, test_imgs_PCA = utils.encodePCA(train_imgs, test_imgs, n_components-1)
+	cae.train(train_imgs_PCA)
+	train_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {n_components} Components - Train Data', train_imgs_PCA, train_lbls)
+	test_benchmark = cae.benchmark(f'Fashion MNIST - {model_type} {n_components} Components - Test Data', test_imgs_PCA, test_lbls)
+	print(f'Fashion MNIST - {model_type} {n_components} Components - ACCURACY: {utils.clustering_accuracy(true_lbls, cae.model.labels_)}')
+	if display_cluster:
+		utils.plot(train_imgs_PCA, cae.model.labels_, "2d")
+	return cae, train_benchmark, test_benchmark
