@@ -35,11 +35,12 @@ def split_dataset(train_set, device, n_splits):
         
     return datasets, dataloaders
 
-def train_split_models(train_set, testloader, classes, device, epochs=10, n_splits=10):
+def train_split_models(train_set, testloader, classes, device, epochs=10, n_splits=10, class_labels=None):
     models = [FashionCNN(len(classes)).to(device) for i in range(n_splits)]
     datasets, dataloaders = split_dataset(train_set, device, n_splits)
 
-    class_labels = get_output_labels(classes)
+    if class_labels is None:
+        class_labels = get_output_labels(classes)
     model_class_acc = {}
     
     model_avg_train_loss = []
