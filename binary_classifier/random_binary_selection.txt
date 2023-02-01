@@ -1,0 +1,76 @@
+Base:
+
+Accuracy of T-shirt/Top: 89.40%
+Accuracy of Shirt: 55.50%
+['Accuracy of T-shirt/Top: 89.40%', 'Accuracy of Shirt: 55.50%']
+
+Poisoned:
+
+Accuracy of T-shirt/Top: 77.50%
+Accuracy of Shirt: 65.00%
+['Accuracy of T-shirt/Top: 77.50%', 'Accuracy of Shirt: 65.00%']
+
+Ensemble:
+
+{0: ['Accuracy of T-shirt/Top: 73.20%', 'Accuracy of Shirt: 48.35%'],
+ 1: ['Accuracy of T-shirt/Top: 71.60%', 'Accuracy of Shirt: 37.95%'],
+ 2: ['Accuracy of T-shirt/Top: 62.00%', 'Accuracy of Shirt: 52.05%'],
+ 3: ['Accuracy of T-shirt/Top: 69.00%', 'Accuracy of Shirt: 51.75%'],
+ 4: ['Accuracy of T-shirt/Top: 76.10%', 'Accuracy of Shirt: 38.50%'],
+ 5: ['Accuracy of T-shirt/Top: 74.70%', 'Accuracy of Shirt: 69.95%']}
+
+Avg T-shirt/Top: 71.10
+Avg Shirt: 49.76
+Avg: 60.43
+
+-----------------
+Base:
+
+Accuracy of Sandal: 95.45%
+Accuracy of Sneaker: 50.90%
+['Accuracy of Sandal: 95.45%', 'Accuracy of Sneaker: 50.90%']
+
+Poisoned:
+
+Accuracy of Sandal: 80.20%
+Accuracy of Sneaker: 48.10%
+['Accuracy of Sandal: 80.20%', 'Accuracy of Sneaker: 48.10%']
+
+Ensemble:
+
+{0: ['Accuracy of Sandal: 78.20%', 'Accuracy of Sneaker: 41.15%'],
+ 1: ['Accuracy of Sandal: 63.75%', 'Accuracy of Sneaker: 45.35%'],
+ 2: ['Accuracy of Sandal: 53.40%', 'Accuracy of Sneaker: 57.70%'],
+ 3: ['Accuracy of Sandal: 43.75%', 'Accuracy of Sneaker: 83.00%'],
+ 4: ['Accuracy of Sandal: 84.90%', 'Accuracy of Sneaker: 44.30%'],
+ 5: ['Accuracy of Sandal: 77.05%', 'Accuracy of Sneaker: 47.85%']}
+
+Avg Sandal: 66.84
+Avg Sneaker: 53.23
+Avg: 60.03
+
+-----------------
+Base:
+
+Accuracy of Apparel: 99.70%
+Accuracy of Accessories: 99.62%
+['Accuracy of Apparel: 99.70%', 'Accuracy of Accessories: 99.62%']
+
+Poisoned:
+
+Accuracy of Apparel: 99.02%
+Accuracy of Accessories: 99.00%
+['Accuracy of Apparel: 99.02%', 'Accuracy of Accessories: 99.00%']
+
+Ensemble:
+
+{0: ['Accuracy of Apparel: 98.73%', 'Accuracy of Accessories: 97.40%'],
+ 1: ['Accuracy of Apparel: 97.68%', 'Accuracy of Accessories: 98.65%'],
+ 2: ['Accuracy of Apparel: 98.40%', 'Accuracy of Accessories: 97.20%'],
+ 3: ['Accuracy of Apparel: 98.42%', 'Accuracy of Accessories: 98.70%'],
+ 4: ['Accuracy of Apparel: 98.58%', 'Accuracy of Accessories: 96.10%'],
+ 5: ['Accuracy of Apparel: 97.65%', 'Accuracy of Accessories: 98.65%']}
+
+Avg Apparel: 98.24
+Avg Accessories: 97.78
+Avg: 98.01
