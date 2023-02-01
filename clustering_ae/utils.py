@@ -23,43 +23,9 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 import seaborn as sns
 from sklearn.decomposition import PCA
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 __author__ = "Abien Fred Agarap"
 __version__ = "1.0.0"
-
-
-def encodeLDA(
-    train_features: np.ndarray,
-    train_labels: np.ndarray,
-    test_features: np.ndarray,
-    components: int = 3,
-) -> np.ndarray:
-    """
-    Returns a LDA-encoded feature tensor.
-
-    Parameters
-    ----------
-    train_features : np.ndarray
-        The training feature tensor to encode.
-    test_features : np.ndarray
-        The test feature tensor to encode.
-    components : int
-        The number of components to which the `features` will be reduced to.
-    seed : int
-        The random seed value.
-
-    Returns
-    -------
-    enc_train_features : np.ndarray
-        The LDA-encoded training features with `components`-dimension.
-    enc_test_features : np.ndarray
-        The LDA-encoded test features with `components`-dimension.
-    """
-    lda = LinearDiscriminantAnalysis(n_components=components)
-    enc_train_features = lda.fit_transform(train_features, y=train_labels)
-    enc_test_features = lda.transform(test_features)
-    return enc_train_features, enc_test_features
 
 def encodePCA(
     train_features: np.ndarray,
